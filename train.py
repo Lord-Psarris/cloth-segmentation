@@ -84,6 +84,7 @@ def training_loop(options: Parser):
     start_time = time.time()
 
     # main loop
+    dataset_size = len(dataloader)
     for iteration in range(dataset_size // options.batchSize):
         data_batch = next(get_data)
         run_training_batch(data_batch, u_net,
