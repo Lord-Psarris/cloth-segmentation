@@ -1,6 +1,6 @@
 # Clothes Segmentation using U2NET #
 
-Based on the [cloth segmentation repo](https://github.com/levindabhi/cloth-segmentation)
+Based on the [cloth segmentation repo](https://github.com/levindabhi/cloth-segmentation) and made some adjustments for easier inference and training.
 
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)

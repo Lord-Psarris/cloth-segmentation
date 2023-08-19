@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 def args_parser(yaml_path: str = None):
-    # TODO: set to process input arguments
+    # TODO: set to process input arguments :- dataset_folder, device, checkpoints_path, continue_train
     options = Parser()
 
     # run options utils
@@ -84,7 +84,7 @@ def training_loop(options: Parser):
     start_time = time.time()
 
     # main loop
-    for iteration in range(options.iter):
+    for iteration in range(dataset_size // options.batchSize):
         data_batch = next(get_data)
         run_training_batch(data_batch, u_net,
                            device=device, start_time=start_time,
