@@ -34,7 +34,7 @@ This model works well with any background and almost all poses. For more samples
 
 - Download dataset from this [link](https://www.kaggle.com/c/imaterialist-fashion-2019-FGVC6/data), extract all items.
 - Set path of `train` folder which contains training images and `train.csv` which is label csv file in `options/main.py`
-- To port original u2net of all layer except last layer please run `python setup_model_weights.py` and it will generate weights after model surgey in `_prev_checkpoints` folder.
+- To port original u2net of all layer except last layer please run `python setup_model_weights.py` and it will generate weights after model surgery in `_prev_checkpoints` folder.
 - You can explore various options in `options/main.py` like checkpoint saving folder, logs folder etc.
 - For single gpu set `distributed = False` in `options/main.py`, for multi gpu set it to `True`.
 - For single gpu run `python train.py`

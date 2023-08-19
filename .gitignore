@@ -162,3 +162,7 @@ cython_debug/
 _logs/
 _results/
 .idea/
+trained_checkpoint/
+_prev_checkpoints/
+
+trials.py

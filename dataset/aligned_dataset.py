@@ -69,7 +69,7 @@ class AlignedDataset(BaseDataset):
             zip(info["annotations"], info["labels"])
         ):
             sub_mask = self.rle_decode(
-                annotation, (info["orig_height"], info["orig_width"])
+                annotation, (int(info["orig_height"]), int(info["orig_width"]))
             )
             sub_mask = Image.fromarray(sub_mask)
             sub_mask = sub_mask.resize(
@@ -150,7 +150,7 @@ class AlignedDataset(BaseDataset):
         shape: (height,width) of array to return
         Returns numpy array according to the shape, 1 - mask, 0 - background
         """
-        shape = (shape[1], shape[0])
+        shape = (int(shape[1]), int(shape[0]))
         s = mask_rle.split()
         # gets starts & lengths 1d arrays
         starts, lengths = [np.asarray(x, dtype=int) for x in (s[0::2], s[1::2])]
